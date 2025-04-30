@@ -4,6 +4,7 @@ import herbalTeaImg from "../../assets/herbal_tea.jpeg"
 import blackTeaImg from "../../assets/black_tea.jpeg"
 import greenTeaImg from "../../assets/green_tea.jpg"
 import whiteTeaImg from "../../assets/white_tea.jpg"
+import "./SubscriptionCard.css"
 
 function SubscriptionCard({ sub, onCancel }) {
     const teaImages = (title) => {
@@ -15,7 +16,7 @@ function SubscriptionCard({ sub, onCancel }) {
 
     return (
         <section>
-            <div className="tea-subscriptions" key={sub.id} style={{ border: "1px solid #ccc", margin: "1rem", padding: "1rem" }}>
+            <div className="tea-subs" key={sub.id} style={{ border: "1px solid #ccc", margin: "1rem", padding: "1rem" }}>
                 <h3>🍵{sub.attributes.title} 🍵</h3>
                 <p>Status: {sub.attributes.status} </p>    
                 <p>Price: ${sub.attributes.price} </p>

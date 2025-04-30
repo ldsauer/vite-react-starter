@@ -4,8 +4,7 @@ import SubscriptionDetails from '../SubscriptionDetails/SubscriptionDetails'
 import './App.css'
 
 function App() {
-  console.log("App loaded");
-  return (
+    return (
     <div>
       <Routes>
         <Route path="/" element={<SubscriptionList />} />

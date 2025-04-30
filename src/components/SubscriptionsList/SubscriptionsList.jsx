@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { Link } from "react-router-dom"
 import SubscriptionDetails from "../SubscriptionDetails/SubscriptionDetails";
 import SubscriptionCard from "../SubscriptionCard/SubscriptionCard";
-
+import "./SubscriptionsList.css"
 
 function SubscriptionList() {
     const [subscriptions, setSubscriptions] = useState([])
@@ -39,7 +39,12 @@ function SubscriptionList() {
         })
         .then((response) => response.json())
         .then((data) => {
-            setSubscriptions(data.data)
+            const updated = data.data
+            setSubscriptions((prevSubs) =>
+                prevSubs.map((sub) => 
+                    sub.id === updated.id ? updated : sub
+                )
+            )
         })
         .catch((error) => {
             console.error("Error cancelling subscription:", error)
@@ -47,18 +52,22 @@ function SubscriptionList() {
     }
 
     return (
-        <section>
-            <h1>🐉The Jasmine Dragon🐉</h1>
-            <h2>🫖 Tea Subscriptions 🫖</h2>
-            <button className="sort-button" onClick={sortPrice}>Sort by Price (High to Low)</button>
-            {subscriptions.map((sub) => (
-                <SubscriptionCard
+        <main>
+            <header>
+                <h1>🐉The Jasmine Dragon🐉</h1>
+                <h2>🫖 Tea Subscriptions 🫖</h2>
+                <button className="sort-button" onClick={sortPrice}>Sort by Price (High to Low)</button>
+            </header>
+            <div className="sub-list">
+                {subscriptions.map((sub) => (
+                    <SubscriptionCard
                     key={sub.id}
                     sub={sub}
                     onCancel={handleCancel}
-                />
-            ))}
-        </section>
+                    />
+                ))}
+            </div>
+        </main>
     )
 }
 
