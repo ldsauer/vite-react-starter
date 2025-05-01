@@ -56,7 +56,7 @@ function SubscriptionList() {
             <header>
                 <h1>🐉The Jasmine Dragon🐉</h1>
                 <h2>🫖 Tea Subscriptions 🫖</h2>
-                <button className="sort-button" onClick={sortPrice}>Sort by Price (High to Low)</button>
+                <button className="sort-button" onClick={sortPrice}>Sort by Price </button>
             </header>
             <div className="sub-list">
                 {subscriptions.map((sub) => (
