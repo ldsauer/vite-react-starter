@@ -1,4 +1,4 @@
-# Pet MatchMaker API
+# The Jasmine Dragon - FE
 
 ## Overview
 
@@ -26,38 +26,31 @@ This is the front-end React application for The Jasmine Dragon, a tea subscripti
 3. Install dependecies: `npm install`
 4. Setup the dev server: `npm run dev`
 
-## Wireframe & Arcitecture
+## Wireframe 
 
-![Wireframe](assets/wireframe.png)
-[![DBDiagram Schema](assets/db_diagram.svg "Schema")]
+![Wireframe](src/assets/wireframe.png)
 
-## API Endpoints
+## Component Architecture
 
-To view the available endpoints for this API, please visit our [OpenAPI Documentation](https://pet-matchmaker-2412.github.io/pet_matchmaker_api_docs/). There you will find our endpoint definitions, required formatting for requests, example requests and responses (including JSON schemas), and the ability to try out requests on our deployed instance!
+```
+src/components
+├── App
+│   ├── App.css
+│   └── App.jsx
+├── SubscriptionCard
+│   ├── SubscriptionCard.css
+│   └── SubscriptionCard.jsx
+├── SubscriptionDetails
+│   ├── SubscriptionDetails.css
+│   └── SubscriptionDetails.jsx
+└── SubscriptionsList
+    ├── SubscriptionsList.css
+    └── SubscriptionsList.jsx
+```
 
 ## Contributors
-
-### Beverly Green
-
-- [LinkedIn](https://www.linkedin.com/in/beverlylouisegreen/)
-- [GitHub](https://github.com/bevgreen)
-
-### Jaren Garman
-
-- [LinkedIn](https://www.linkedin.com/in/jarengarman/)
-- [GitHub](https://github.com/JarenGarman)
-
-### Jonathan Atkins
-
-- [LinkedIn](https://www.linkedin.com/in/jonathanjatkins/)
-- [GitHub](https://github.com/Jonathan-Atkins)
 
 ### Logan Sauer
 
 - [LinkedIn](https://www.linkedin.com/in/ldsauer/)
 - [GitHub](https://github.com/ldsauer)
-
-### Will Fox
-
-- [LinkedIn](https://www.linkedin.com/in/williammacdonaldfox/)
-- [GitHub](https://github.com/willfox0409)
